@@ -1,0 +1,4 @@
+neo4j_host_port=localhost:7474
+neo4j_username=neo4j
+neo4j_password=gotola
+neo4j_connection_url=http://localhost:7474/db/data/

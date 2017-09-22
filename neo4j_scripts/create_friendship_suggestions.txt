@@ -1,0 +1,4 @@
+MATCH (person:Person)-[:KNOWS]-(friend:Person)-[:KNOWS]-(suggested_friend:Person)
+WHERE NOT (person)-[:KNOWS]-(suggested_friend) AND person <> suggested_friend
+MERGE (person)-[rel:SUGGESTED]-(suggested_friend)
+RETURN person.name, type(rel), suggested_friend.name
